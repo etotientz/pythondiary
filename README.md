@@ -1,0 +1,2 @@
+# pythondiary
+My Workplace 
