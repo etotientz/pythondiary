@@ -1,18 +1,18 @@
 a=list(map(int,raw_input().split()))
-
-current_max=0;
-best_max=-9999999999
-posit=0
+start=end=start1=0
+k=current_max=best_max=0
 for i,l in enumerate(a):
-	if l<0:
-		posit=-1
+	if max(a)<0:
+		k=1
 	if current_max+l>0:
-		current_max=current_max+a[i]
+		current_max+=a[i]
 	else:
 		current_max=0
+		start=i+1
 	if current_max>best_max:
 		best_max=current_max
-if posit==0:
-  print best_max
+		start1,end=start,i+1
+if k==0:
+  print best_max,start1,end-1
 else:
 	print max(a)
